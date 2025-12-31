@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Login</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <canvas id="particles"></canvas>
+
+  <!-- ========== LOGIN PAGE ========== -->
+  <div id="loginPage" class="page active">
+    <div class="card">
+      <h2>Login</h2>
+
+      <input id="username" type="text" placeholder="Username">
+
+      <div class="password-box">
+        <input id="password" type="password" placeholder="Password">
+        <span onclick="togglePassword()">👁</span>
+      </div>
+
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <!-- ========== DASHBOARD PAGE ========== -->
+  <div id="dashboardPage" class="page">
+    <div class="card">
+      <h2 id="welcomeText"></h2>
+
+      <div class="link" onclick="goProfile()">Profile Settings</div>
+
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <!-- ========== PROFILE PAGE ========== -->
+  <div id="profilePage" class="page">
+    <div class="card">
+      <h2>Profile Settings</h2>
+
+      <p><strong>Name:</strong> Admin User</p>
+      <p><strong>Email:</strong> admin@example.com</p>
+      <p><strong>Role:</strong> Administrator</p>
+
+      <div class="link" onclick="goDashboard()">⬅ Back to Dashboard</div>
+    </div>
+  </div>
+
+  <!-- Link JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
